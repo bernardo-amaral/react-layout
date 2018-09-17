@@ -1,0 +1,14 @@
+version: '3.2'
+
+services:
+  nodejs:
+    container_name: nodejs
+    build: 
+      context: ./
+      args:
+        - PROXY_HOST=10.203.4.11
+        - PROXY_PORT=3128    
+    ports:
+      - '8888:8080'        
+    volumes:
+      - '.:/app'
