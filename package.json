@@ -5,6 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "start": "babel-node ./src/index.js",
+    "start:dev": "webpack-dev-server --inline --content-base public/ --history-api-fallback",
     "lint": "./node_modules/.bin/eslint src/*js",
     "prepush": "npm run lint",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch"
@@ -35,9 +36,14 @@
     "sinon": "^4.4.2",
     "sinon-chai": "^2.14.0",
     "sinon-stub-promise": "^4.0.0",
-    "webpack": "^4.0.1"
+    "webpack": "^4.0.1",
+    "http-server": "*"
   },
   "dependencies": {
-    "react": "^16.5.1"
+    "axios": "^0.18.0",
+    "numeral": "^2.0.6",
+    "react": "^16.5.1",
+    "react-dom": "*",
+    "react-scripts": "*"
   }
 }
